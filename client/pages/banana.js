@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const banana = () => {
-  return (
-    <div>banana</div>
-  )
-}
+  return <div>bananalolololol</div>;
+};
 
-export default banana
+export default banana;
