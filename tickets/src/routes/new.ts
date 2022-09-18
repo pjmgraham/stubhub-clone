@@ -1,6 +1,7 @@
 import express, { Request, Response } from "express";
 import { body } from "express-validator";
 import { requireAuth, validateRequest } from "@pjmtix/common";
+import { Ticket } from "../models/ticket";
 
 const router = express.Router();
 
@@ -15,7 +16,16 @@ router.post(
   ],
   validateRequest,
   (req: Request, res: Response) => {
-    res.sendStatus(200);
+    const { title, price } = req.body;
+
+    const ticket = Ticket.build({
+      title,
+      price,
+      userId: req.currentUser!.id,
+    });
+    ticket.save();
+
+    res.status(201).send(ticket);
   }
 );
 
