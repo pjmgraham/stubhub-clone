@@ -5,12 +5,10 @@ import {
   validateRequest,
   NotFoundError,
   BadRequestError,
-  NotAuthorizedError,
-  OrderStatus,
 } from "@pjmtix/common";
 import { body } from "express-validator";
 import { Ticket } from "../models/ticket";
-import { Order } from "../models/order";
+import { Order, OrderStatus } from "../models/order";
 import { OrderCreatedPublisher } from "../events/publishers/order-created-publisher";
 import { natsWrapper } from "../nats-wrapper";
 
