@@ -1,10 +1,12 @@
 name: tests-tickets
 
-on: 
+on:
   pull_request
-  
-jobs: 
-  build: 
+    paths:
+    - 'tickets/**'
+
+jobs:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

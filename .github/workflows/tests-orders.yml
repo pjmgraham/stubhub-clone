@@ -1,11 +1,12 @@
-
 name: tests-orders
 
-on: 
+on:
   pull_request
-  
-jobs: 
-  build: 
+    paths:
+    - 'orders/**'
+
+jobs:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
