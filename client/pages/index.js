@@ -28,6 +28,12 @@ const LandingPage = ({ currentUser, tickets }) => {
         </thead>
         <tbody>{ticketList}</tbody>
       </table>
+
+      <div>
+        <Link href="/tickets/new">
+          <a>Create a Ticket</a>
+        </Link>
+      </div>
     </div>
   );
 };
