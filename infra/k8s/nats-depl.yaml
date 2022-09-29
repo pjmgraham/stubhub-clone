@@ -2,6 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nats-depl
+  namespace: test
+  labels:
+    app: nats
 spec:
   replicas: 1
   selector:

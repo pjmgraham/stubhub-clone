@@ -2,6 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: auth-mongo-depl
+  namespace: test
+  labels:
+    app: auth-mongo
 spec:
   replicas: 1
   selector:
@@ -28,4 +31,3 @@ spec:
     protocol: TCP
     port: 27017
     targetPort: 27017
-    
