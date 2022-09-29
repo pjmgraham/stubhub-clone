@@ -2,9 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: expiration-redis-depl
-  namespace: test
-  labels:
-    app: expiration-redis
 spec:
   replicas: 1
   selector:
