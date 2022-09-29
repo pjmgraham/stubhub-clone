@@ -2,6 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: orders-depl
+  namespace: test
+  labels:
+    app: orders
 spec:
   replicas: 1
   selector:
